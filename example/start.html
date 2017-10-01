@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Start jQuery</title>
+    <link rel="stylesheet" href="style/base.css">
+</head>
+<body>
+    <script src="lib/jquery.js"></script>
+
+    <h1>Lista zadań do zrobienia</h1>
+    <div>
+        <p>
+            <span>Początek listy</span>
+        </p>
+        <ol>
+            <li>Utworzyć plik</li>
+            <li class="important">Napisać kod</li>
+            <li>Przetestować</li>
+        </ol>
+        <span id="endlist">Koniec listy</span>
+    </div>
+    <br />
+    <a href="http://api.jquery.com/">Dokumentacja jQuery</a>
+
+    <script>
+
+        /*
+
+        var onH1Clicked = function () {
+            console.log('clicked onH1Clicked');
+        }
+
+        */
+
+        /*
+        $('h1').click(function() {
+            console.log('clicked');
+
+            $('h1').toggleClass("important");
+            $('p').addClass('important');
+        });
+        */
+
+
+        //Zmienia klasę dla klikniętego elementu li
+
+        $('li').click(function() {
+            console.log('clicked');
+
+            $(this).toggleClass('important');
+        });
+
+        //Zmienia kolor linka, nie przechodzi na strone
+
+        var changeClass = function (event) {
+            event.preventDefault();
+            $(this).toggleClass('important');
+        };
+
+        $('a').click(changeClass);
+
+
+        //
+
+        var changeClass1 = function (event) {
+            event.stopPropagation();
+            $(this).toggleClass('important');
+        };
+
+        $('div').click(changeClass1);
+        $('li').click(changeClass1);
+
+
+
+        // Znajdujemy element span o identyfikatorze "endlist" i nadajemy mu klasę o nazwie "last"
+        $( "span#endlist" ).addClass( "last" );
+
+        // Wyszukujemy element span będący dzieckiem elementu p a następnie wyświetlamy w consoli jego zawartość
+        var $spanElement = $( "p > span");
+        console.log( $spanElement.text() );
+
+        // Pobieramy atrybut href znacznika "a" i wyświetlamy go w consol'i
+        var jQueryApiLink = $( "a" ).attr( "href" );
+        console.log( jQueryApiLink );
+    </script>
+</body>
+</html>

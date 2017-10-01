@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>1.selectors</title>
+</head>
+<body>
+    <script src="lib/jquery.js"></script>
+    <p>Początek</p>
+    <ul>
+        <li>Poniedziałek</li>
+        <li>Wtorek</li>
+        <li>Środa</li>
+        <li>Czwartek</li>
+        <li id="friday">Piątek</li>
+        <li class="weekend">Sobota</li>
+        <li class="weekend">Niedziela</li>
+    </ul>
+    <div>
+        <p>Koniec</p>
+    </div>
+
+    <script>
+        console.log($("li#friday").text());
+        console.log($("li.weekend").text());
+
+        console.log($("div p").text());
+
+        $("ul li:first-child").hide();
+
+        //$("li:first-of-type").hide();
+
+        /*
+         1. Dodaj bibliotekę jQuery do dokumentu
+
+         2. Znajdź element li o identyfikatorze "friday"
+            Wynik wyszukiwania wyświetl w konsoli
+
+         3. Znajdź elementy li o klasie "weekend"
+            Wynik wyszukiwania wyświetl w konsoli
+
+         4. Znajdź element p, który osadzony jest w elemencie div
+            Pobierz jego zawartość i wyświetl w konsoli
+
+         5. Ukryj pierwszy element listy
+
+         */
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2.actions</title>
+    <link rel="stylesheet" href="style/base.css">
+</head>
+<body>
+    <script src="lib/jquery.js"></script>
+    <table>
+        <tr>
+            <th>Kolumna 1</th>
+            <th>Kolumna 2</th>
+            <th>Kolumna 3</th>
+        </tr>
+        <tr>
+            <td> 1.1 </td>
+            <td> 1.2 </td>
+            <td class="last"> 1.3 </td>
+        </tr>
+        <tr>
+            <td> 2.1 </td>
+            <td> 2.2 </td>
+            <td class="last"> 2.3 </td>
+        </tr>
+    </table>
+    <span class="hidden">Opis do tabeli</span>
+    <p>Chcę być zielony</p>
+
+    <script>
+        $('th').addClass("blue");
+        $("td").removeClass("last");
+        $("span").removeClass("hidden");
+        $("p").css("color", "green");
+
+        $("span").fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).text();
+
+        console.log($(":contains('2')").length);
+
+        console.log($("td:contains('2'), th:contains('2')"));
+
+        /*
+            1. Pokoloruj wiersz z nagłówkami kolumn nadając elementom th klasę "blue"
+            2. Usuń klasę "last" elementom td
+            3. Znajdź element span i spraw by był widoczny na stronie
+            4. Znajdź wszystkie elementy na stronie posiadające cyfrę 2 w swojej treści
+               Wyświetl w konsoli ich ilość.
+            5. Znajdź element p i ustaw dla niego kolor czcionki na zielony
+         */
+    </script>
+</body>
+</html>

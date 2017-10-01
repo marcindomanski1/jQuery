@@ -1,0 +1,19 @@
+.test_red {
+    color: red;
+    font-family: "Courier 10 Pitch";
+}
+
+
+.test_blue {
+    color: blue;
+    font-family: "Tibetan Machine Uni";
+}
+
+.background1 {
+    background-color: red;
+}
+
+.background2 {
+    background-color: blue;
+}
+
